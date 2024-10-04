@@ -1,0 +1,76 @@
+@import "../../styles/mixins.scss";
+
+.dragItems {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: min-content;
+  column-gap: 10px;
+}
+
+.dragSmallPhotos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.firstPhoto {
+  width: 214px;
+  height: 170px;
+  display: grid;
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+
+  p {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #b8b5b58c;
+    padding: 3px;
+    border-radius: 4px;
+    width: max-content;
+  }
+}
+
+.smallCard {
+  width: 92px;
+  height: 80px;
+  position: relative;
+
+  img {
+    border-radius: 4px;
+    position: absolute;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+}
+
+@include Tablet {
+  .firstPhoto,
+  .smallCard {
+    width: 210px;
+    height: 166px;
+  }
+
+  .dragItems {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .dragSmallPhotos {
+    display: flex;
+  }
+}

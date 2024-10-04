@@ -1,0 +1,17 @@
+@import "../../styles/mixins.scss";
+
+.advertisements {
+  width: 100%;
+  margin: 0 auto;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+.advertisementsContainer {
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}

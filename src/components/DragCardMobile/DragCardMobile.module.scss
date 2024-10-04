@@ -1,0 +1,63 @@
+.cameraIcon {
+  width: 200px;
+  height: 200px;
+}
+
+.image {
+  width: 200px;
+  height: 200px;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.icon {
+  svg {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+.clearIcon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: blue;
+  color: white;
+  border-radius: 50%;
+}
+
+.dragCardMobile {
+  transition: transform 0.2s ease;
+}
+
+.dragging {
+  opacity: 0.5;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  cursor: grabbing;
+}
+
+.draggingPreview {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.7;
+  width: 200px;
+  height: 200px;
+  transition: 0.3s;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.dragging {
+  opacity: 0.5;
+}
